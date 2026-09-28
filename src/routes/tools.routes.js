@@ -34,7 +34,7 @@ toolsRouter.get("/:id", (req, res) => {
 
   if (!tool) {
     return res.status(404).json({
-      message: "Tool not found",
+      error: { message: "Tool not found" },
     });
   }
   res.json({ data: tool });
